@@ -1,0 +1,696 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+display: grid;
+grid-template-columns: 1fr 1fr;
+background-color: rgba(245, 245, 245, 1);
+font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+width: 1240px;
+margin: 0 auto;
+}
+
+/* общие стили */
+
+.buttons {
+    background-color: rgba(255, 197, 86, 1);
+    border-radius: 8px;
+}
+
+.text-header {
+    font-size: 16px;
+    color: rgba(36, 36, 36, 1);
+
+}
+/* хедер */
+header {
+    height: 50px;
+    grid-column: 1 / 3;
+    border-bottom: 1px solid #CDCDCD;
+    padding-bottom: 20px;
+    background-color: white;
+    padding-top: 30px;
+}
+
+.header_menu {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; 
+    align-items: center;
+}
+
+.header__logo {
+    grid-column: 1 / 2;   
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+   
+}
+.header__logo-img {
+    width: 24px;
+    height: 24px;
+}
+
+.header__logo-text{
+    padding-left: 5px;
+    font-size: 20px;
+    font-weight: 900;
+}
+.header__info {
+    grid-column: 2 / 3;  
+    display: flex;
+    justify-content: space-evenly;
+}
+.header__info-mail {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+.header__info-tel {
+    display: flex;
+    justify-content: space-between;  
+    gap: 5px;
+}
+.header__button-challenge {
+    display: flex;
+    justify-content: end;
+}
+.header__button {
+    grid-column: 3 / 4; 
+    display: flex; 
+    justify-content: center;
+    height: 44px;
+    width: 198px;
+    border: none;
+    align-items: center;
+    gap: 5px;
+}
+.header__item-logo-text {
+    text-decoration: none;
+}
+
+
+/* меню */
+nav {
+    grid-column: 1 / 3;
+    background-color: rgba(245, 245, 245, 1); 
+}
+
+.main-menu__list {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center; 
+}
+
+.main-menu__list a {
+    text-decoration: none; 
+    color: black;
+    font-size: 16px;
+}
+
+.main-menu__item {
+    width: 248px;
+    height: 52px;
+    border-right: 3px #CDCDCD solid;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-menu__item:last-of-type {
+    border-right: none;
+}
+.main-menu__item:hover {
+    border-top: 2px solid rgba(255, 197, 86, 1);
+}
+
+/* баннер */
+.section-banner {
+    grid-column: 1 / 3;
+    border: 1px solid black;
+    background-image: url(./img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+.section-banner__position {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 100%;
+    align-items: center;
+    padding-top: 250px;
+}
+
+.section-banner__title {
+    font-size: 56px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+.section-banner__text {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+
+/* Блок о нас */
+
+.main-section {
+    grid-column: 1 / 3;
+    margin-top: 40px;
+}
+
+.main-section__about-company {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+display: flex;
+justify-content: space-between;
+}
+
+.main-section__info {
+    grid-column: 1 / 2;
+    max-width: 467px;
+}
+
+.main-section__img {
+    grid-column: 2 / 3;
+    background-image: url(./img/about_me.svg);
+    height: 336px;
+    width: 705px;
+    border-radius: 10px;
+}
+.main-section__title {
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+.main-section__text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 15px;
+}
+
+/* услуги */
+
+.section-product {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-product__info {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 30px;
+}
+
+.section-product__auto {
+    width: 386px;
+    height: 296px;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(102, 102,102, 0.5);
+    background-color: white;
+}
+
+.section-product-img {
+    width: 353px;
+    height: 249px;
+    background-color: white;
+}
+
+
+/* преимущества */
+
+.section-advantages {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.section-advantages__info {
+    display: flex;
+    justify-content: space-between;   
+    gap: 5px;
+    margin-top: 40px;
+
+}
+.section-advantages__icon {
+    background-color: white;
+    width: 289px;
+    height: 224px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px rgba(102, 102,102, 0.5);
+}
+
+.section-advantages__img {
+    padding-bottom: 40px;
+}
+
+
+
+/* Карта */
+
+.section-map {
+    grid-column: 1 / 3;
+    text-align: center;
+    margin-top: 40px;
+}
+.section-map__title {
+    margin-top: 30px;
+}
+
+.iframe {
+     width: 100%;
+     height: 687px;
+     margin-top: 30px;
+}
+
+/* футер */
+
+/* общие стили футера */
+
+.footer-text {
+    font-size: 16px;
+}
+
+footer {
+   grid-column: 1 / 3;
+    background-color: rgba(224, 224, 224, 1);
+    height: 240px;
+    margin-top: 100px;
+    border-bottom: 1px solid blue;
+}
+
+.footer-container {
+    border-bottom: 1px solid rgba(197, 197, 197, 1);
+}
+.footer-block {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+.footer-block__logo {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer__logo-text {
+    font-size: 20px;
+}
+
+.footer-block__info {
+    margin-top: 30px;
+}
+
+.footer-block__info-mail {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.footer-block__info-tel {
+    display: flex;
+    justify-content: left;
+    gap: 5px;   
+    margin-top: 12px;
+}
+
+.footer__menu-list {
+list-style: none;
+align-items: center; 
+gap: 5px;
+}
+
+.footer__menu-list a{
+    text-decoration: none; 
+    color: black;
+    font-size: 16px;
+}
+
+.footer-block__item {
+    margin-bottom: 12px;
+}
+
+.footer-block__button-tel {
+    display: flex; 
+    justify-content: center;
+    height: 44px;
+    width: 198px;
+    border: none;
+    align-items: center;
+    gap: 5px;
+}
+
+.footer-block__button-img {
+width: 24px;
+height: 28px;   
+}
+
+.footer__name-firm {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* форма */
+
+[btn="form"] * {
+    pointer-events: none;
+}
+.popup{
+    position: fixed !important;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0,0, 0.5);
+}
+
+textarea{
+    resize: none;
+}
+
+fieldset{
+    border: none;
+}
+
+form{
+    background-color: rgba(224, 224, 224, 1);
+    border-radius: 8px;
+    width: 400px;
+    height: 530px;
+}
+
+fieldset{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-input{
+    width: 80%;
+}
+
+input, textarea{
+    width: 100%;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    outline:none;
+    padding-left: 10px;
+    
+}
+
+.form-title {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+.contact-input__name {
+    height: 50px;
+    margin-bottom: 20px;
+
+}
+
+.form__imput {
+    height: 100px;
+
+
+}
+.submiting{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(224, 224, 224, 1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 400px;
+    height: 530px;
+}
+
+.popup-contact-button {
+background-color: rgba(255, 197, 86, 1);
+border-radius: 8px;
+display: flex; 
+    justify-content: center;
+    height: 44px;
+    width: 198px;
+    border: none;
+    align-items: center;
+    gap: 5px;
+    margin-top: 20px;
+}
+
+
+/* стили 2 страницы */
+
+
+/* баннер */
+
+.section-banner-vacancy {
+    grid-column: 1 / 3;
+    border: 1px solid black;
+    background-image: url(./img/banner2.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+/* секция */
+.main-section-vacancy__text {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.section-banner-vacancy__title {
+    font-size: 56px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+.section-banner-vacancy__text {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+.section-banner-vacancy__position {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 100%;
+    align-items: center;
+    padding-top: 250px;
+}
+
+/* стили 3 страницы */
+
+.section-banner-partners {
+    grid-column: 1 / 3;
+    border: 1px solid black;
+    background-image: url(./img/banner\ 3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+.section-banner-partner__title {
+    font-size: 56px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 20px;
+}
+.section-banner-partner__text {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 1);
+}
+.section-banner-partner__position {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    height: 100%;
+    align-items: center;
+    padding-top: 250px;
+}
+
+.section-tablo {
+    grid-column: 1 / 3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.section-tablo__form {
+    height: 186px;
+    background-color: rgba(255, 255, 255, 1);
+    margin: 30px;
+    border-radius: 12px;
+    padding-top: 20px;
+}
+.section-tablo__form-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.section-tablo__item-A {
+    display: flex;
+    padding-bottom: 16px;
+    gap: 5px;
+}
+.section-tablo__weight {
+    display: flex; 
+    padding-bottom: 16px;
+    gap: 5px;
+}
+.section-tablo__date {
+    display: flex; 
+    padding-bottom: 30px;
+    gap: 5px;
+}
+.section-tablo__item-B {
+    display: flex; 
+    gap: 5px;
+}
+.btn-close{
+    display: block;
+    text-align: right;
+    padding-right: 10px;
+}
+.section-tablo__button-tel { 
+    display: flex; 
+    justify-content: center;
+    height: 44px;
+    width: 180px;
+    border: none;
+    align-items: center;
+    gap: 5px;
+}
+.mobile-menu{
+    display: none;
+    position: fixed;
+    top: 25px;
+    right: 0;
+    z-index: 200;
+    background-color: #fff;
+}
+ul.mobile-menu__list{
+    list-style: none;
+    /*width: 150px;*/
+}
+.header__item-logo-title{
+    width: 150px;
+}
+.header__item-logo-text{
+    display: flex;
+}
+.header__menu-mobile-logo{
+    display: none;
+}
+
+@media(max-width: 1024px){
+    .container{
+        width: 100%;
+    }
+    .main-menu{
+        display: none;
+    }
+}
+
+
+@media(max-width: 480px){
+    .page {
+        display: block;
+        grid-template-columns: 1fr;
+    }
+    .container {
+        width: auto;
+    }
+    
+    header {
+        grid-column: auto;
+    }
+
+    .header__button-challenge{
+        display: none;
+    }
+    .header__info{
+        z-index: 100;
+        background: #fff;
+        padding: 16px 
+    }
+    .header__logo{
+        z-index: 1;
+        background-color: #fff;
+    }
+    .header__menu-mobile-logo{
+        display: block;
+        background: #fff;
+    z-index: 10;
+    }
+    .header_menu{
+        /* display: flex;
+        flex-direction: column;
+        align-items: inherit; */
+        grid-template-columns: 1fr;
+    }
+    .header__menu-mobile-flex{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 25px;
+    }
+
+    .section-banner {
+        grid-column: auto;
+    }
+
+    .section-banner__text {
+        text-align: center;
+    }
+
+    .header__logo,
+    .header__info,
+    .header__button-challenge {
+        grid-column: 1;
+    }
+
+    .main-section__about-company, .section-product__info, .section-advantages__info{
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .main-section__img{
+        width: 100%;
+    }
+    .footer-block__button{
+        display: none;
+    }
+    .footer-block{
+        flex-direction: column;
+    }
+    footer{
+        height: auto;
+    }
+    .footer-block__info-mail{
+        justify-content: left;
+    }
+    .ul.mobile-menu__list{
+        
+    }
+}
